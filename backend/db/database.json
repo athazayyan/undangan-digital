@@ -1,0 +1,167 @@
+{
+  "invitations": [
+    {
+      "id": "wedding-demo",
+      "hostName": "Adi & Indah",
+      "eventType": "wedding",
+      "theme": "gold",
+      "title": "The Wedding of Adi & Indah",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "details": {
+        "groomName": "Aditya Pratama",
+        "groomParent": "Putra dari Bpk. Budi & Ibu Siti",
+        "brideName": "Indah Lestari",
+        "brideParent": "Putri dari Bpk. Joko & Ibu Aminah",
+        "date": "2026-10-18",
+        "time": "09:00 - selesai",
+        "locationName": "Gedung Sasana Kriya, TMII, Jakarta",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7483863486127!2d106.89209567587126!3d-6.300683493688537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2ea70000001%3A0xe543ef816a24be51!2sSasana%20Kriya!5e0!3m2!1sid!2sid!4v1718446900000!5m2!1sid!2sid",
+        "quote": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang.",
+        "quoteSource": "Ar-Rum: 21",
+        "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800"
+      },
+      "status": "premium",
+      "createdAt": "2026-06-15T09:30:00Z"
+    },
+    {
+      "id": "birthday-demo",
+      "hostName": "Rian 17th",
+      "eventType": "birthday",
+      "theme": "neon",
+      "title": "Rian's Sweet 17 Cyber Party",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "details": {
+        "celebrantName": "Rian Hidayat",
+        "age": "17",
+        "date": "2026-07-25",
+        "time": "19:00 - 22:00",
+        "locationName": "Level Up Arcade Cafe, Bandung",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7965377561494!2d107.6186256758778!3d-6.914863993084656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e635c991b8d5%3A0x64b63e8a4a589cf8!2sBandung%20Indah%20Plaza!5e0!3m2!1sid!2sid!4v1718446950000!5m2!1sid!2sid",
+        "quote": "Let's celebrate another year of pixels, music, and epic levels! Dress code: Neon Casual.",
+        "quoteSource": "Rian",
+        "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800"
+      },
+      "status": "free",
+      "createdAt": "2026-06-15T09:31:00Z"
+    },
+    {
+      "id": "khitanan-demo",
+      "hostName": "Khitanan Faiz",
+      "eventType": "khitanan",
+      "theme": "batik",
+      "title": "Tasyakuran Khitan Faiz",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+      "details": {
+        "celebrantName": "Faiz Ramadhan",
+        "parentNames": "Putra dari Bpk. H. Ahmad & Ibu Laili",
+        "date": "2026-08-09",
+        "time": "10:00 - 15:00",
+        "locationName": "Kediaman Keluarga, Jl. Kebon Sirih No. 12, Solo",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.123456789!2d110.825!3d-7.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMzMnNTcuNiJTIDExMMKwNDknMzAuMCJF!5e0!3m2!1sid!2sid!4v1718447000000!5m2!1sid!2sid",
+        "quote": "Merupakan ungkapan syukur kami atas pelaksanaan syariat khitan putra kami tercinta, semoga tumbuh menjadi anak yang sholeh.",
+        "quoteSource": "Keluarga Bpk. H. Ahmad",
+        "imageUrl": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800"
+      },
+      "status": "premium",
+      "createdAt": "2026-06-15T09:32:00Z"
+    },
+    {
+      "id": "1ktacfqscm4",
+      "hostName": "Adi & Indah",
+      "eventType": "wedding",
+      "theme": "gold",
+      "title": "Undangan Resmi Adi & Indah",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "details": {
+        "date": "2026-10-18",
+        "time": "09:00 - selesai",
+        "locationName": "Gedung Sasana Kriya, TMII, Jakarta",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7483863486127!2d106.89209567587126!3d-6.300683493688537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2ea70000001%3A0xe543ef816a24be51!2sSasana%20Kriya!5e0!3m2!1sid!2sid!4v1718446900000!5m2!1sid!2sid",
+        "quote": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri...",
+        "quoteSource": "Ar-Rum: 21",
+        "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800",
+        "groomName": "Aditya Pratama",
+        "groomParent": "Putra dari Bpk. Budi & Ibu Siti",
+        "brideName": "Indah Lestari",
+        "brideParent": "Putri dari Bpk. Joko & Ibu Aminah"
+      },
+      "status": "premium",
+      "createdAt": "2026-06-15T02:37:51.964Z"
+    },
+    {
+      "id": "fmhsf0n9aod",
+      "hostName": "Rian 17th",
+      "eventType": "birthday",
+      "theme": "neon",
+      "title": "Undangan Rian 17th",
+      "musicUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "details": {
+        "date": "2026-07-25",
+        "time": "19:00 — 22:00",
+        "locationName": "Level Up Arcade Cafe, Bandung",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7483863486127!2d106.89209567587126!3d-6.300683493688537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2ea70000001%3A0xe543ef816a24be51!2sSasana%20Kriya!5e0!3m2!1sid!2sid!4v1718446900000!5m2!1sid!2sid",
+        "quote": "Let's celebrate another year of pixels, music, and epic levels!",
+        "quoteSource": "Rian",
+        "imageUrl": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800",
+        "celebrantName": "Rian Hidayat",
+        "age": "17"
+      },
+      "status": "premium",
+      "createdAt": "2026-06-15T02:51:02.606Z"
+    }
+  ],
+  "rsvps": [
+    {
+      "id": "rsvp-1",
+      "invitationId": "wedding-demo",
+      "guestName": "Budi Santoso",
+      "status": "attending",
+      "guestCount": 2,
+      "timestamp": "2026-06-15T09:40:00Z"
+    },
+    {
+      "id": "rsvp-2",
+      "invitationId": "wedding-demo",
+      "guestName": "Dewi Lestari",
+      "status": "undecided",
+      "guestCount": 1,
+      "timestamp": "2026-06-15T09:42:00Z"
+    },
+    {
+      "id": "rsvp-3",
+      "invitationId": "birthday-demo",
+      "guestName": "Chandra Wijaya",
+      "status": "attending",
+      "guestCount": 1,
+      "timestamp": "2026-06-15T09:45:00Z"
+    },
+    {
+      "id": "nmobxx7cfx2",
+      "invitationId": "fmhsf0n9aod",
+      "guestName": "Atha",
+      "status": "attending",
+      "guestCount": 1,
+      "timestamp": "2026-06-15T02:53:29.366Z"
+    }
+  ],
+  "wishes": [
+    {
+      "id": "wish-1",
+      "invitationId": "wedding-demo",
+      "guestName": "Budi Santoso",
+      "message": "Selamat menempuh hidup baru Adi dan Indah! Semoga sakinah mawaddah warahmah ya, amin!",
+      "emoji": "🎉",
+      "signature": "",
+      "timestamp": "2026-06-15T09:40:00Z"
+    },
+    {
+      "id": "wish-2",
+      "invitationId": "birthday-demo",
+      "guestName": "Chandra Wijaya",
+      "message": "Happy Sweet 17th Rian! Makin jago main arcade-nya dan sukses selalu!",
+      "emoji": "🎂",
+      "signature": "",
+      "timestamp": "2026-06-15T09:45:00Z"
+    }
+  ]
+}
