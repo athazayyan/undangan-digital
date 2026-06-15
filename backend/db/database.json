@@ -1,4 +1,27 @@
 {
+  "users": [
+    {
+      "id": "xo5q7olw3aj",
+      "name": "Achmad ATha ",
+      "email": "atha@gmail.com",
+      "passwordHash": "$2b$10$9I3teKUWwKMNI6GBzgjLJ.59TwfmmQq0XLEdUXIz//WfQCCDjY0pe",
+      "createdAt": "2026-06-15T03:08:46.123Z"
+    },
+    {
+      "id": "erbnzzfyces",
+      "name": "Achmad ATha ",
+      "email": "atha2@gmail.com",
+      "passwordHash": "$2b$10$iKK.ey7k.utaJDs0VE0Oius1KX483Ai3G18tVeqvDy/vesGAe0otW",
+      "createdAt": "2026-06-15T03:10:31.252Z"
+    },
+    {
+      "id": "zrcwywez14r",
+      "name": "bro",
+      "email": "atha3@gmail.com",
+      "passwordHash": "$2b$10$jZsu6oegafhA15nUQtfYFOsu1LNrn9zuBXSqpO7zp84KPNUuClK7C",
+      "createdAt": "2026-06-15T03:11:03.291Z"
+    }
+  ],
   "invitations": [
     {
       "id": "wedding-demo",
@@ -142,6 +165,14 @@
       "status": "attending",
       "guestCount": 1,
       "timestamp": "2026-06-15T02:53:29.366Z"
+    },
+    {
+      "id": "z8xzazqxjv5",
+      "invitationId": "wedding-demo",
+      "guestName": "Atha",
+      "status": "not_attending",
+      "guestCount": 1,
+      "timestamp": "2026-06-15T03:09:54.257Z"
     }
   ],
   "wishes": [

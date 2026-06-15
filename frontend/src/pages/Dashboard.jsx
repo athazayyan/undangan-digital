@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { CheckCircle2, XCircle, HelpCircle, Users, Share2, Clipboard, ExternalLink, Calendar, PlusCircle, Monitor } from 'lucide-react';
+import { CheckCircle2, XCircle, HelpCircle, Users, Share2, Clipboard, ExternalLink, Calendar, PlusCircle, Monitor, LogOut } from 'lucide-react';
 import CustomCursor from '../components/CustomCursor';
 import MonogramBadge from '../components/MonogramBadge';
 import DeckleEdge from '../components/DeckleEdge';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { user, token, logout } = useAuth();
   const justCreatedId = location.state?.justCreatedId;
 
   const [invitations, setInvitations]       = useState([]);
@@ -20,7 +22,10 @@ export default function Dashboard() {
   const [copiedMsg, setCopiedMsg]           = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/invitations')
+    if (!token) return;
+    fetch('http://localhost:5000/api/invitations', {
+      headers: { Authorization: `Bearer ${token}` },
+    })
       .then(r => r.ok ? r.json() : [])
       .then(list => {
         setInvitations(list);
@@ -28,7 +33,7 @@ export default function Dashboard() {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, [justCreatedId]);
+  }, [token, justCreatedId]);
 
   useEffect(() => {
     if (!selectedId) return;
@@ -69,13 +74,41 @@ export default function Dashboard() {
         background: 'rgba(255,248,245,0.9)', backdropFilter: 'blur(12px)',
         position: 'sticky', top: 0, zIndex: 40,
       }}>
-        <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 500 }}>
-          E-<em style={{ color: 'var(--primary)', fontStyle: 'italic' }}>nvelope</em>
-          <span className="label-sm" style={{ marginLeft: 12, color: 'var(--outline)' }}>Host Panel</span>
-        </span>
-        <Link to="/gallery" className="btn-primary cursor-zone" style={{ padding: '10px 20px', fontSize: 13 }}>
-          <PlusCircle size={14} /> Undangan Baru
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 500 }}>
+            E-<em style={{ color: 'var(--primary)', fontStyle: 'italic' }}>nvelope</em>
+          </span>
+          <span className="label-sm" style={{ color: 'var(--outline)', paddingLeft: 16, borderLeft: '1px solid var(--outline-variant)' }}>
+            Host Panel
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          {user && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{
+                width: 32, height: 32, borderRadius: '50%',
+                background: 'var(--primary-fixed)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'var(--font-serif)', fontWeight: 600, fontSize: 14,
+                color: 'var(--on-primary-fixed)',
+              }}>
+                {user.name.charAt(0).toUpperCase()}
+              </div>
+              <span className="label-md" style={{ color: 'var(--on-surface-variant)' }}>{user.name}</span>
+            </div>
+          )}
+          <Link to="/gallery" className="btn-primary cursor-zone" style={{ padding: '10px 20px', fontSize: 13 }}>
+            <PlusCircle size={14} /> Undangan Baru
+          </Link>
+          <button
+            onClick={() => { logout(); navigate('/login'); }}
+            className="btn-ghost cursor-zone"
+            style={{ padding: '10px 16px', fontSize: 13, display: 'flex', alignItems: 'center', gap: 6 }}
+          >
+            <LogOut size={14} /> Keluar
+          </button>
+        </div>
       </nav>
 
       <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', minHeight: 'calc(100vh - 68px)' }}>
@@ -90,7 +123,12 @@ export default function Dashboard() {
           <p className={labelCls} style={{ color: 'var(--primary)' }}>Daftar Undangan</p>
 
           {invitations.length === 0 ? (
-            <p className="body-md" style={{ fontSize: 13 }}>Belum ada undangan.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <p className="body-md" style={{ fontSize: 13, color: 'var(--outline)' }}>Anda belum membuat undangan.</p>
+              <Link to="/gallery" className="btn-primary cursor-zone" style={{ padding: '10px 16px', fontSize: 13, justifyContent: 'center' }}>
+                Buat Undangan Pertama
+              </Link>
+            </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {invitations.map(inv => (

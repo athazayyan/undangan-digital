@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ChevronLeft, Save, Calendar, MapPin, Image, Info } from 'lucide-react';
 import CustomCursor from '../components/CustomCursor';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function InvitationCustomizer() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { token } = useAuth();
 
   const templateId      = searchParams.get('template') || 'wedding-gold';
   const initialTheme    = searchParams.get('theme') || 'gold';
@@ -77,14 +79,20 @@ export default function InvitationCustomizer() {
     try {
       const res = await fetch('http://localhost:5000/api/invitations', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
         body: JSON.stringify({ hostName, eventType, theme, title, musicUrl, details, status }),
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || 'Gagal menyimpan.');
+      }
       const saved = await res.json();
       navigate('/dashboard', { state: { justCreatedId: saved.id } });
-    } catch {
-      alert('Gagal menyimpan. Pastikan server Express (port 5000) sudah berjalan.');
+    } catch (e) {
+      alert(e.message || 'Gagal menyimpan. Pastikan server Express (port 5000) sudah berjalan.');
     } finally {
       setIsSaving(false);
     }

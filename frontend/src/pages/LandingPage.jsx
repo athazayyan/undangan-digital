@@ -4,6 +4,7 @@ import { ArrowRight, Check } from 'lucide-react';
 import CustomCursor from '../components/CustomCursor';
 import DeckleEdge from '../components/DeckleEdge';
 import MonogramBadge from '../components/MonogramBadge';
+import { useAuth } from '../contexts/AuthContext';
 
 /* ── Inline SVG botanical decoration ── */
 const Botanical = ({ style }) => (
@@ -30,6 +31,7 @@ const CalliRule = () => (
 export default function LandingPage() {
   const [demoOpen, setDemoOpen] = useState(false);
   const heroRef = useRef(null);
+  const { user, logout } = useAuth();
 
   const features = [
     {
@@ -66,12 +68,25 @@ export default function LandingPage() {
           E-<em style={{ color: 'var(--primary)', fontStyle: 'italic' }}>nvelope</em>
         </span>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
           <Link to="/gallery" className="label-md" style={{ color: 'var(--on-surface-variant)', textDecoration: 'none' }}>Templates</Link>
-          <Link to="/dashboard" className="label-md" style={{ color: 'var(--on-surface-variant)', textDecoration: 'none' }}>Dashboard</Link>
-          <Link to="/gallery" className="btn-primary" style={{ padding: '10px 24px', fontSize: 14 }}>
-            Buat Undangan
-          </Link>
+          {user ? (
+            <>
+              <Link to="/dashboard" className="label-md" style={{ color: 'var(--on-surface-variant)', textDecoration: 'none' }}>Dashboard</Link>
+              <span className="label-md" style={{ color: 'var(--outline)' }}>Hai, {user.name.split(' ')[0]} 👋</span>
+              <button
+                onClick={logout}
+                style={{ background: 'none', border: '1.5px solid var(--outline-variant)', borderRadius: 'var(--radius-full)', padding: '8px 18px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, cursor: 'pointer', color: 'var(--on-surface-variant)', transition: 'background 0.2s' }}
+              >Keluar</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="label-md" style={{ color: 'var(--on-surface-variant)', textDecoration: 'none' }}>Masuk</Link>
+              <Link to="/register" className="btn-primary" style={{ padding: '10px 24px', fontSize: 14 }}>
+                Daftar Gratis
+              </Link>
+            </>
+          )}
         </div>
       </nav>
 
